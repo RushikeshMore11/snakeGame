@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      min-height: 100vh;
+      width: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .game-board{
+      height: 90vmin;
+      width: 90vmin;
+      background: linear-gradient(orange,yellow);
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-rows: repeat(16, 1fr);
+    }
+    .score{
+      background-color: yellow;
+      padding: 12px 12px;
+      border-radius: 12px ;
+    }
+    h2{
+      margin: 0;
+    }
+    .snake{
+      background-color: rgb(82, 207, 48);
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    .head{
+      background: url('./snake.png');
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      z-index: 22;
+    }
+    .food{
+      background: url('./apple.png');
+   
+      background-size: cover;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="score">Score: <span id="score">0</span></h2>
+    <div class="game-board"></div>
+  </div>
+  <script src="./snake.js"></script>
+</body>
+</html>
